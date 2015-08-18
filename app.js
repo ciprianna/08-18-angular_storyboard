@@ -1,5 +1,20 @@
 var storyApp = angular.module('storyApp', ['ui.router'])
 
+storyApp.config([
+  '$stateProvider',
+  '$urlRouteProvider',
+  function($stateProvider, $urlRouteProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: '/home.html',
+        controller: 'StoryCtrl'
+      });
+
+    $urlRouteProvider.otherwise('home');
+  }
+])
+
 storyApp.controller('StoryCtrl', [
   '$scope',
   'stories',
