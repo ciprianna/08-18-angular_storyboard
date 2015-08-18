@@ -1,4 +1,4 @@
-var storyApp = angular.module('storyApp', [])
+var storyApp = angular.module('storyApp', ['ui.router'])
 
 storyApp.controller('StoryCtrl', [
   '$scope',
