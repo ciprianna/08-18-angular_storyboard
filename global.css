@@ -1,0 +1,19 @@
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 42pt;
+}
+
+.top_stories {
+  font-size: 16pt;
+}
+
+.top_stories__thumb {
+  color: green;
+}
+
+.top_stories__title {
+  font-size: 24pt;
+  font-weight: 200;
+  font-style: italic;
+  margin-left: 15px;
+}
