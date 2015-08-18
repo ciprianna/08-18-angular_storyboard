@@ -5,5 +5,8 @@ storyApp.controller('StoryCtrl', function($scope){
     {title: 'Chamber', author: 'JK', upvotes: 5},
     {title: 'Goblet', author: 'JK', upvotes: 15},
     {title: 'Prince', author: 'JK', upvotes: 25}
-  ]
+  ];
+  $scope.addStory = function(){
+    $scope.stories.push({title: 'Deathly', author: 'JK', upvotes: 0})
+  };
 })

@@ -10,6 +10,7 @@
       <div ng-repeat="story in stories | orderBy: '-upvotes'">
         {{story.title}} by: {{story.author}}, upvotes: {{story.upvotes}}
       </div>
+      <button ng-click="addStory()">Add a New Story</button>
     </div>
   </body>
 </html>
