@@ -1,9 +1,9 @@
-var storyApp = angular.module('storyApp', ['ui.router', 'templates'])
-
-storyApp.config([
+angular.module('storyApp', ['ui.router', 'templates'])
+.config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
+
     $stateProvider
       .state('home', {
         url: '/home',
@@ -14,7 +14,7 @@ storyApp.config([
         url: '/stories/{id}',
         templateUrl: 'story/_stories.html',
         controller: 'StoryCtrl'
-      });
+      })
 
     $urlRouterProvider.otherwise('home');
   }
@@ -38,23 +38,6 @@ storyApp.controller('TopStoriesCtrl', [
       story.upvotes += 1;
     };
 }]);
-
-storyApp.controller('StoryCtrl', [
-  '$scope',
-  '$stateParams',
-  'stories',
-  function($scope, $stateParams, stories){
-    $scope.story = stories.stories[$stateParams];
-    $scope.addComment = function(){
-      if($scope.body === ''){return;}
-      $scope.story.comments.push({
-        body: $scope.body,
-        author_id: 'person'
-      })
-    }
-
-  }
-]);
 
 storyApp.factory('stories', [function(){
   var storyfuncs = {
