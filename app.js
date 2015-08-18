@@ -7,6 +7,11 @@ storyApp.controller('StoryCtrl', function($scope){
     {title: 'Prince', author: 'JK', upvotes: 25}
   ];
   $scope.addStory = function(){
-    $scope.stories.push({title: 'Deathly', author: 'JK', upvotes: 0})
+    if($scope.title === '' || !$scope.title){return;}
+    $scope.stories.push({title: $scope.title, upvotes: 0})
+    $scope.title = '';
   };
+  $scope.incrementUpvotes = function(story){
+    story.upvotes += 1;
+  }
 })

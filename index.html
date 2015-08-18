@@ -8,9 +8,13 @@
   <body ng-app="storyApp">
     <div ng-controller="StoryCtrl">
       <div ng-repeat="story in stories | orderBy: '-upvotes'">
+        <span ng-click="incrementUpvotes(story)">^</span>
         {{story.title}} by: {{story.author}}, upvotes: {{story.upvotes}}
       </div>
-      <button ng-click="addStory()">Add a New Story</button>
+      <form ng-submit="addStory()">
+        <input type="text" ng-model="title" placeholder="Title">
+        <button type="submit">Add Your Story</button>
+      </form>
     </div>
   </body>
 </html>
