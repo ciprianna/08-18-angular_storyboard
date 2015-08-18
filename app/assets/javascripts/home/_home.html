@@ -1,0 +1,21 @@
+
+  <div class="page-header">
+    <h1>Story Board</h1>
+  </div>
+
+  <div class="top_stories">
+    <div ng-repeat="story in stories | orderBy: '-upvotes'">
+      <span ng-click="incrementUpvotes(story)" class="glyphicon glyphicon-thumbs-up"></span>
+      {{story.upvotes}}
+      <span class="top_stories__title">
+        <a href="/stories/{{$index}}">{{story.title}}</a></span> by: {{story.author}}
+    </div>
+
+    <div class="form-group">
+      <form ng-submit="addStory()">
+        <input type="text" ng-model="title" placeholder="Title" class="form-control">
+        <button type="submit" class="btn btn-success">Add Your Story</button>
+      </form>
+    </div>
+
+  </div>

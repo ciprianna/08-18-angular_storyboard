@@ -1,0 +1,17 @@
+<div class="page-header">
+  <h1>{{story.title}}</h1>
+</div>
+
+<div ng-repeat="comment in story.comments">
+  {{comment.body}}
+  <br>
+  Posted by: {{comment.author}}
+</div>
+
+<form ng-submit="addComment()">
+  <h3>Add a comment</h3>
+  <div class="form-group">
+    <input type="text" placeholder="Comment" ng-model="body" class="form-control">
+  </div>
+  <button class="btn btn-success" type="submit">Post</button>
+</form>
