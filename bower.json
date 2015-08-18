@@ -1,0 +1,20 @@
+{
+  "name": "08-18-angular_storyboard",
+  "version": "0.0.0",
+  "authors": [
+    "Ciprianna <ciprianna17@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5"
+  }
+}
