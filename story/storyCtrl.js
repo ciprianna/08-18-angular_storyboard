@@ -1,5 +1,3 @@
-var storyApp = angular.module('storyApp', [])
-
 storyApp.controller('StoryCtrl', function($scope){
   $scope.stories = [
     {title: 'Chamber', author: 'JK', upvotes: 5},
