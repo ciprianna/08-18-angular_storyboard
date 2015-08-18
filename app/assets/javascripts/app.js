@@ -1,4 +1,4 @@
-var storyApp = angular.module('storyApp', ['ui.router'])
+var storyApp = angular.module('storyApp', ['ui.router', 'templates'])
 
 storyApp.config([
   '$stateProvider',
@@ -15,7 +15,7 @@ storyApp.config([
         templateUrl: 'story/_stories.html',
         controller: 'StoryCtrl'
       });
-      
+
     $urlRouterProvider.otherwise('home');
   }
 ])
